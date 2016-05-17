@@ -1,0 +1,22 @@
+body{
+    background-image: url(../img/index_background.png);
+    background-size: auto;
+}
+#play_button{
+    position: absolute; 
+    top: 293px; 
+    left: 269px;
+    width: 137px;
+    height: 137px;
+    background-image: url(../img/play_button.png);    
+}
+#play_button:hover
+{
+    background-image: url(../img/play_button_hover.png);
+}
+.play_button_div
+{
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
