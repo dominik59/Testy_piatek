@@ -1,0 +1,28 @@
+body{
+    background-image: url(../img/index_background.png);
+    background-size: auto;
+}
+#younger_group
+{
+    position: absolute;
+    width: 550px;
+    height: 316px;
+    background-image: url(../img/young_user_tab.png);    
+    -webkit-filter: grayscale(100%);
+}
+#younger_group:hover{
+    -webkit-filter: grayscale(0%);
+}
+#older_group
+{
+    position: absolute;
+    top: 320px;
+    background-image: url(../img/old_user_tab.png);
+    width: 550px;
+    height: 316px;
+    -webkit-filter: grayscale(100%);
+}
+#older_group:hover
+{
+    -webkit-filter: grayscale(0%);
+}
