@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="assets/scripts/jquery-2.2.3.min.js"></script>
         <script type="text/javascript" src="assets/scripts/script.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/styles/second_page.css"></link
+        <link rel="stylesheet" type="text/css" href="assets/styles/young_test_page.css"></link
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -21,10 +21,28 @@ and open the template in the editor.
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <div class="col-sm-offset-3 col-sm-4">
-            <a href="young_test_page.html" id="younger_group"></a>
-            <a href="old_test_page.html" id="older_group"></a>
+    <body onload="clear_the_young_counter();load_next_young_question();">
+        <div class="col-sm-offset-3 col-sm-6 jumbotron text-center img-rounded young_block">
+            <div id="young_question_text" class="col-sm-12 text-center young_block_item">
+                Przykładowa treść pytania.
+            </div>
+            <div class="col-sm-offset-1 col-sm-11 text-left young_block_item">
+                <div class="radio">
+                    <input type="radio" name="optradio"><label id="young_answear_1">Option 1</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="optradio"><label id="young_answear_2">Option 2</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="optradio"><label id="young_answear_3">Option 3</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="optradio"><label id="young_answear_4">Option 4</label>
+                </div>
+            </div>
+            <div class="col-sm-12 young_block_item">
+                <button id="young_next_question" class="btn btn-info" onclick="load_next_young_question()">Następne pytanie</button>
+            </div>
         </div>
     </body>
 </html>
