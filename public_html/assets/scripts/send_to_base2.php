@@ -15,7 +15,7 @@
     {
       $punkty=$_POST['punkty'];
     }
-    $result = mysql_query("INSERT INTO `wyniki_young` (`Imie`, `Kontakt`, `L_punkt`) VALUES('".$imie."', '".$kontakt."', '".$punkty."');" );          //query
+    $result = mysql_query("INSERT INTO `wyniki_old` (`Imie`, `Kontakt`, `L_punkt`) VALUES('".$imie."', '".$kontakt."', '".$punkty."');" );          //query
     
     echo json_encode($result);
 ?>

@@ -86,7 +86,7 @@ function send_old_to_base()
     alert(document.getElementById('old_name').value);
     $.ajax({
         type:"POST",
-        url: 'assets/scripts/send_to_base.php', //the script to call to get data          
+        url: 'assets/scripts/send_to_base2.php', //the script to call to get data          
         data: {imie: document.getElementById('old_name').value, kontakt: document.getElementById('old_contact').value, punkty:punkty},
         //you can insert url argumnets here to pass to api.php
         //for example "id=5&parent=6"

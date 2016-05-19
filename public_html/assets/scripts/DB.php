@@ -14,5 +14,5 @@
 
   $databaseName = "testy";
   $youngTableName = "pytania_mlodsze";
-  $oldTableName = "pytania_mlodsze";
+  $oldTableName = "pytania_starsze";
 ?>
