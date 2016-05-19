@@ -56,7 +56,7 @@ function send_young_to_base()
     {
         punkty = old_points;
     }
-    alert(document.getElementById('young_name').value);
+    //alert(document.getElementById('young_name').value);
     $.ajax({
         type:"POST",
         url: 'assets/scripts/send_to_base.php', //the script to call to get data          
@@ -83,7 +83,7 @@ function send_old_to_base()
     {
         punkty = old_points;
     }
-    alert(document.getElementById('old_name').value);
+    //alert(document.getElementById('old_name').value);
     $.ajax({
         type:"POST",
         url: 'assets/scripts/send_to_base2.php', //the script to call to get data          
@@ -189,7 +189,7 @@ function check_old_question()
         }
         if (old_nr_of_question == total_number_of_old_question-1)
         {
-            alert(old_points);
+            //alert(old_points);
             name_and_phone_page_creation();
         }
         else
