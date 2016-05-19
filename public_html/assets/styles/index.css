@@ -20,3 +20,29 @@ body{
     left: 0; 
     top: 0;
 }
+.knit_site
+{
+    position: absolute;
+    width: 122px;
+    height: 118px;
+    top: 123px;
+    left: 150px;
+    transform: rotate(-10.9deg);
+}
+.knit_site:hover
+{
+    background: url(../img/knit_site.png);
+}
+.sw_mansion_site
+{
+    position: absolute;
+    width: 94px;
+    height: 95px;
+    top: 231px;
+    left: 420px;
+    transform: rotate(-13deg);
+}
+
+.sw_mansion_site:hover{
+    background: url(../img/sw_mansion_site.png);
+}

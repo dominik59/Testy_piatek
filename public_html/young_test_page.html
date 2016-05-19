@@ -21,27 +21,41 @@ and open the template in the editor.
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </head>
-    <body onload="clear_the_young_counter();load_next_young_question();">
-        <div class="col-sm-offset-3 col-sm-6 jumbotron text-center img-rounded young_block">
+    <body onload="clear_the_young_counter();load_young_question_from_base();">
+        <div id="first_young_block" class="col-sm-offset-3 col-sm-6 jumbotron text-center img-rounded young_block">
             <div id="young_question_text" class="col-sm-12 text-center young_block_item">
                 Przykładowa treść pytania.
             </div>
             <div class="col-sm-offset-1 col-sm-11 text-left young_block_item">
                 <div class="radio">
-                    <input type="radio" name="optradio"><label id="young_answear_1">Option 1</label>
+                    <input id="young_radio1" type="radio" name="optradio"><label id="young_answear_1">Option 1</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="optradio"><label id="young_answear_2">Option 2</label>
+                    <input id="young_radio2" type="radio" name="optradio"><label id="young_answear_2">Option 2</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="optradio"><label id="young_answear_3">Option 3</label>
+                    <input id="young_radio3" type="radio" name="optradio"><label id="young_answear_3">Option 3</label>
                 </div>
                 <div class="radio">
-                    <input type="radio" name="optradio"><label id="young_answear_4">Option 4</label>
+                    <input id="young_radio4" type="radio" name="optradio"><label id="young_answear_4">Option 4</label>
                 </div>
             </div>
             <div class="col-sm-12 young_block_item">
-                <button id="young_next_question" class="btn btn-info" onclick="load_next_young_question()">Następne pytanie</button>
+                <button id="young_next_question" class="btn btn-info" onclick="check_young_question();">Następne pytanie</button>
+            </div>
+        </div>
+        <div id="second_young_block" class="col-sm-offset-3 col-sm-6 jumbotron text-center img-rounded young_block">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label>Twoje imię:</label>
+                    <input type="text" placeholder="Proszę wpisz tu swoje imię" class="form-control" id="young_name">
+                    <label>Twój telefon/e-mail:</label>
+                    <input type="text" placeholder="Proszę wpisz tu swój telefon lub email" class="form-control" id="young_contact">
+                </div>
+                <div style="margin-top:10px"> </div>
+                <div class="col-sm-12 young_block_item">
+                    <button id="young_next_question" class="btn btn-info" onclick="send_young_to_base();back_to_main_page();">Zatwierdź i wyślij do bazy</button>
+                </div>
             </div>
         </div>
     </body>
