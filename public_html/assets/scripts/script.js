@@ -8,6 +8,11 @@ var old_points=0;
 var young_question = []; //= [["1.Po wyłączeniu komputera wymazuje się zawartość:", "pamięci RAM", "pamięci ROM", "pamięci zewnętrznej", "dyskietki"], ["2. Najmniejszą jednostką informacji jest:", "1 bajt", "1 znak", "1 bit", "1 plik"], ["3. dysk twardy to rodzaj:", "pamięci wewnętrznej", "pamięci operacyjnej", "ulotnej pamięci zewnętrznej", "pamięci zewnętrznej"], ["4. Folderem w systemie Windows nazywamy:", "obrazek zapisany na dysku twardym.", "	miejsce na dysku do zapisywania plików lub innych folderów.", "	część sytemu operacyjnego.", "urządzenie wejściowe komputera."]];
 var old_question = [];//[["1.Po wyłączeniu komputera wymazuje się zawartość:", "pamięci RAM", "pamięci ROM", "pamięci zewnętrznej", "dyskietki"], ["2. Najmniejszą jednostką informacji jest:", "1 bajt", "1 znak", "1 bit", "1 plik"], ["3. dysk twardy to rodzaj:", "pamięci wewnętrznej", "pamięci operacyjnej", "ulotnej pamięci zewnętrznej", "pamięci zewnętrznej"], ["4. Folderem w systemie Windows nazywamy:", "obrazek zapisany na dysku twardym.", "	miejsce na dysku do zapisywania plików lub innych folderów.", "	część sytemu operacyjnego.", "urządzenie wejściowe komputera."]];
 
+
+function html2text(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function back_to_main_page()
 {
     document.location.href = "index.html";
@@ -26,12 +31,12 @@ function clear_the_old_counter()
     young_points=0;
 }
 function load_next_young_question()
-{
-    document.getElementById('young_question_text').innerHTML = young_question[young_nr_of_question][0];
-    document.getElementById('young_answear_1').innerHTML = young_question[young_nr_of_question][1];
-    document.getElementById('young_answear_2').innerHTML = young_question[young_nr_of_question][2];
-    document.getElementById('young_answear_3').innerHTML = young_question[young_nr_of_question][3];
-    document.getElementById('young_answear_4').innerHTML = young_question[young_nr_of_question][4];
+{    
+    document.getElementById('young_question_text').innerHTML = html2text(young_question[young_nr_of_question][0]);
+    document.getElementById('young_answear_1').innerHTML = html2text(young_question[young_nr_of_question][1]);
+    document.getElementById('young_answear_2').innerHTML = html2text(young_question[young_nr_of_question][2]);
+    document.getElementById('young_answear_3').innerHTML = html2text(young_question[young_nr_of_question][3]);
+    document.getElementById('young_answear_4').innerHTML = html2text(young_question[young_nr_of_question][4]);
     document.getElementById('young_radio1').checked = false;
     document.getElementById('young_radio2').checked = false;
     document.getElementById('young_radio3').checked = false;
@@ -149,11 +154,11 @@ function check_young_question()
 
 function load_next_old_question()
 {
-    document.getElementById('old_question_text').innerHTML = old_question[old_nr_of_question][0];
-    document.getElementById('old_answear_1').innerHTML = old_question[old_nr_of_question][1];
-    document.getElementById('old_answear_2').innerHTML = old_question[old_nr_of_question][2];
-    document.getElementById('old_answear_3').innerHTML = old_question[old_nr_of_question][3];
-    document.getElementById('old_answear_4').innerHTML = old_question[old_nr_of_question][4];
+    document.getElementById('old_question_text').innerHTML = html2text(old_question[old_nr_of_question][0]);
+    document.getElementById('old_answear_1').innerHTML = html2text(old_question[old_nr_of_question][1]);
+    document.getElementById('old_answear_2').innerHTML = html2text(old_question[old_nr_of_question][2]);
+    document.getElementById('old_answear_3').innerHTML = html2text(old_question[old_nr_of_question][3]);
+    document.getElementById('old_answear_4').innerHTML = html2text(old_question[old_nr_of_question][4]);
     document.getElementById('old_radio1').checked = false;
     document.getElementById('old_radio2').checked = false;
     document.getElementById('old_radio3').checked = false;

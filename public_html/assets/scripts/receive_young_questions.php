@@ -7,7 +7,7 @@
     //--------------------------------------------------------------------------
     // 2) Query database for data
     //--------------------------------------------------------------------------
-    
+    mysql_query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
     $result = mysql_query("SELECT * FROM $youngTableName " );          //query
     while ( $row = mysql_fetch_row($result) )
     {

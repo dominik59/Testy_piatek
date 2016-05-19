@@ -15,6 +15,7 @@
     {
       $punkty=$_POST['punkty'];
     }
+    mysql_query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
     $result = mysql_query("INSERT INTO `wyniki_old` (`Imie`, `Kontakt`, `L_punkt`) VALUES('".$imie."', '".$kontakt."', '".$punkty."');" );          //query
     
     echo json_encode($result);
