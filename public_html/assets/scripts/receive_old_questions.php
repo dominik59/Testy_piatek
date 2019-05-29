@@ -1,22 +1,18 @@
-<?php 
-    include "DB.php";
-    
-    $con = mysql_connect($host,$user,$pass);
-    $dbs = mysql_select_db($databaseName, $con);
+<?php
+include "DB.php";
 
-    //--------------------------------------------------------------------------
-    // 2) Query database for data
-    //--------------------------------------------------------------------------
-    mysql_query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
-    $result = mysql_query("SELECT * FROM $oldTableName " );          //query
-    while ( $row = mysql_fetch_row($result) )
-    {
-      $data[] = $row;
-    }
-    
-    
-    //--------------------------------------------------------------------------
-    // 3) echo result as json 
-    //--------------------------------------------------------------------------
-    echo json_encode($data);
+$conn = new PDO("mysql:host=$host;dbname=$databaseName", $user, $pass);
+
+//--------------------------------------------------------------------------
+// 2) Query database for data
+//--------------------------------------------------------------------------
+$conn -> query ('SET NAMES utf8');
+$conn -> query ('SET CHARACTER_SET utf8_unicode_ci');
+$result = $conn->query("SELECT * FROM $oldTableName ")->fetchAll();
+
+
+//--------------------------------------------------------------------------
+// 3) echo result as json
+//--------------------------------------------------------------------------
+echo json_encode($result);
 ?>
